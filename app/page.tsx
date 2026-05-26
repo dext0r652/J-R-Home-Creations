@@ -1,65 +1,214 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Clock, MapPin, Wrench } from "lucide-react";
 
-export default function Home() {
+export const metadata: Metadata = {
+  // Homepage inherits title.default — "J&R Home Creation" — no per-page title needed
+  description:
+    "Verbouwingen, aanbouwen en nieuwbouw in de regio Antwerpen. Ik ben Jerry Callé, eenmanszaak aannemer actief depuis 2008. Vakkundig en zonder compromis.",
+  alternates: { canonical: "https://jrhomecreation.be/" },
+  openGraph: {
+    title: "J&R Home Creation",
+    description:
+      "Verbouwingen, aanbouwen en nieuwbouw in de regio Antwerpen. Vakkundig en zonder compromis.",
+    url: "https://jrhomecreation.be/",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    title: "J&R Home Creation",
+    description: "Verbouwingen, aanbouwen en nieuwbouw in de regio Antwerpen.",
+  },
+};
+
+const services = [
+  {
+    slug: "verbouwingen",
+    title: "Verbouwingen",
+    description: "Van badkamer tot volledige renovatie — zorgvuldig en vakkundig uitgevoerd.",
+    Icon: Wrench,
+  },
+  {
+    slug: "aanbouw",
+    title: "Aanbouw",
+    description: "Vergroot je woning met een kwalitatieve aanbouw die naadloos aansluit.",
+    Icon: CheckCircle2,
+  },
+  {
+    slug: "nieuwbouw",
+    title: "Nieuwbouw",
+    description: "Je nieuwbouwproject van A tot Z begeleid door een ervaren aannemer.",
+    Icon: MapPin,
+  },
+];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  name: "J&R Home Creation",
+  image: "https://jrhomecreation.be/og-image.png",
+  url: "https://jrhomecreation.be",
+  telephone: "+32495501291",
+  email: "homecreation@telenet.be",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Provinciale Steenweg 251",
+    addressLocality: "Schelle",
+    addressRegion: "Antwerpen",
+    postalCode: "2627",
+    addressCountry: "BE",
+  },
+  sameAs: ["https://www.facebook.com/p/JR-Home-Creation-100063583448383/"],
+  priceRange: "€€",
+  vatID: "BE0894930017",
+  founder: { "@type": "Person", name: "Jerry Callé" },
+  foundingDate: "2008",
+};
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      {/* JSON-LD — GeneralContractor schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      {/* ── 1. HERO ─────────────────────────────────────────────────── */}
+      <section className="bg-primary text-primary-foreground overflow-hidden">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Text column */}
+            <div>
+              <div className="w-12 h-1.5 bg-accent rounded-full mb-6" aria-hidden="true" />
+              <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-none tracking-tight mb-6">
+                Eenmalig gebouwd.{" "}
+                <span className="text-accent">Vakkundig gedaan.</span>
+              </h1>
+              <p className="text-primary-foreground/75 text-lg sm:text-xl leading-relaxed max-w-md mb-8">
+                Verbouwingen, aanbouwen en nieuwbouw in de regio Antwerpen —
+                vakkundig en zonder compromis op kwaliteit.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 min-h-[52px] px-8 py-3 bg-accent text-accent-foreground font-semibold text-lg rounded-lg hover:bg-accent/85 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+              >
+                Vraag een offerte
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
+              </Link>
+            </div>
+
+            {/* Photo column */}
+            <div className="relative">
+              <div
+                className="absolute -top-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/40 pointer-events-none"
+                aria-hidden="true"
+              />
+              {/* TODO: replace with real photo from /public/photos/ */}
+              <div className="relative rounded-2xl overflow-hidden bg-primary-foreground/5 border border-primary-foreground/10 aspect-[4/3] flex items-center justify-center">
+                <div className="text-center text-primary-foreground/25 p-8">
+                  <Wrench className="w-16 h-16 mx-auto mb-4" aria-hidden="true" />
+                  <p className="text-sm">HANDOFF: voeg hier een foto in van Jerry Callé of een project</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 2. TRUST RIBBON ─────────────────────────────────────────── */}
+      <section className="bg-secondary border-y border-border" aria-label="Vertrouwenssignalen">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-5">
+          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium">
+            <li className="flex items-center gap-2">
+              <Clock className="w-4 h-4 text-accent shrink-0" aria-hidden="true" />
+              <span><strong>18 jaar</strong> ervaring</span>
+            </li>
+            <li className="hidden sm:block text-border" aria-hidden="true">|</li>
+            <li className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-accent shrink-0" aria-hidden="true" />
+              <span>Regio <strong>Antwerpen</strong></span>
+            </li>
+            <li className="hidden sm:block text-border" aria-hidden="true">|</li>
+            <li className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-accent shrink-0" aria-hidden="true" />
+              <span><strong>Persoonlijke</strong> service</span>
+            </li>
+            <li className="hidden sm:block text-border" aria-hidden="true">|</li>
+            <li className="flex items-center gap-2">
+              <Wrench className="w-4 h-4 text-accent shrink-0" aria-hidden="true" />
+              <span>Verbouwingen · Aanbouw · Nieuwbouw</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ── 3. SERVICES ─────────────────────────────────────────────── */}
+      <section className="py-20 sm:py-24" aria-labelledby="diensten-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <div className="w-10 h-1 bg-accent rounded-full mb-4" aria-hidden="true" />
+            <h2
+              id="diensten-heading"
+              className="font-display font-bold text-4xl sm:text-5xl"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Wat ik voor je doe
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {services.map(({ slug, title, description, Icon }) => (
+              <div
+                key={slug}
+                className="group bg-card rounded-2xl p-8 border border-border hover:border-accent/40 hover:shadow-md transition-all"
+              >
+                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
+                  <Icon className="w-5 h-5 text-accent" aria-hidden="true" />
+                </div>
+                <h3 className="font-display font-bold text-2xl mb-2">{title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-6">
+                  {description}
+                </p>
+                <Link
+                  href={`/diensten#${slug}`}
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:gap-3 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded"
+                  aria-label={`Meer weten over ${title}`}
+                >
+                  Meer weten
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. SOCIAL PROOF — omitted: no real testimonials in CONTEXT.md §8 ── */}
+
+      {/* ── 5. FINAL CTA ─────────────────────────────────────────────── */}
+      <section
+        className="bg-primary text-primary-foreground py-20 sm:py-24"
+        aria-labelledby="cta-heading"
+      >
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
+          <div className="w-10 h-1 bg-accent rounded-full mx-auto mb-6" aria-hidden="true" />
+          <h2
+            id="cta-heading"
+            className="font-display font-bold text-4xl sm:text-5xl mb-4"
+          >
+            Klaar om te starten?
+          </h2>
+          <p className="text-primary-foreground/70 text-lg max-w-md mx-auto mb-8">
+            Vertel me over je project en ik bezorg je een eerlijke offerte —
+            zonder verplichtingen.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 min-h-[52px] px-8 py-3 bg-accent text-accent-foreground font-semibold text-lg rounded-lg hover:bg-accent/85 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Vraag een offerte
+            <ArrowRight className="w-5 h-5" aria-hidden="true" />
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
