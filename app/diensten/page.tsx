@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, MapPin, Wrench } from "lucide-react";
 
@@ -87,12 +88,14 @@ export default function DienstenPage() {
                 className="absolute -top-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/20 pointer-events-none"
                 aria-hidden="true"
               />
-              {/* TODO: replace with verbouwing project photo from /public/photos/ */}
-              <div className="relative rounded-2xl overflow-hidden bg-secondary aspect-[4/3] flex items-center justify-center border border-border">
-                <div className="text-center text-muted-foreground/40 p-8">
-                  <Wrench className="w-12 h-12 mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm">HANDOFF: voeg hier een verbouwingsfoto in</p>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/photos/Bathroom.jpg"
+                  alt="Badkamerrenovatie met microcement wanden en grote vloertegels"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>
@@ -112,12 +115,14 @@ export default function DienstenPage() {
                 className="absolute -bottom-3 -left-3 w-full h-full rounded-2xl border-2 border-accent/20 pointer-events-none"
                 aria-hidden="true"
               />
-              {/* TODO: replace with aanbouw project photo from /public/photos/ */}
-              <div className="relative rounded-2xl overflow-hidden bg-card aspect-[4/3] flex items-center justify-center border border-border">
-                <div className="text-center text-muted-foreground/40 p-8">
-                  <MapPin className="w-12 h-12 mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm">HANDOFF: voeg hier een aanbouw projectfoto in</p>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/photos/renovation.jpg"
+                  alt="Aanbouw in uitvoering — staalstructuur en terrasaanleg"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -224,12 +229,14 @@ export default function DienstenPage() {
                 className="absolute -top-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/20 pointer-events-none"
                 aria-hidden="true"
               />
-              {/* TODO: replace with nieuwbouw project photo from /public/photos/ */}
-              <div className="relative rounded-2xl overflow-hidden bg-secondary aspect-[4/3] flex items-center justify-center border border-border">
-                <div className="text-center text-muted-foreground/40 p-8">
-                  <CheckCircle2 className="w-12 h-12 mx-auto mb-3" aria-hidden="true" />
-                  <p className="text-sm">HANDOFF: voeg hier een nieuwbouw projectfoto in</p>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                <Image
+                  src="/photos/cementing1.2.jpg"
+                  alt="Nieuwbouw in uitvoering — fundering en ruwbouw"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
               </div>
             </div>
           </div>

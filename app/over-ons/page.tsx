@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock, MapPin, Wrench } from "lucide-react";
 
@@ -27,35 +28,17 @@ export default function OverOnsPage() {
       {/* ── HERO ────────────────────────────────────────────────────── */}
       <section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Text */}
-            <div>
-              <div className="w-12 h-1.5 bg-accent rounded-full mb-6" aria-hidden="true" />
-              <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-none tracking-tight mb-6">
-                Jerry Callé.{" "}
-                <span className="text-accent">Aannemer.</span>
-              </h1>
-              <p className="text-primary-foreground/75 text-lg sm:text-xl leading-relaxed max-w-md">
-                Depuis 2008 realiseer ik verbouwingen, aanbouwen en nieuwbouw in
-                de regio Antwerpen. Geen onderaannemers, geen tussenpersonen —
-                persoonlijk contact van begin tot einde.
-              </p>
-            </div>
-
-            {/* Photo */}
-            <div className="relative">
-              <div
-                className="absolute -top-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/40 pointer-events-none"
-                aria-hidden="true"
-              />
-              {/* TODO: replace with real photo from /public/photos/ */}
-              <div className="relative rounded-2xl overflow-hidden bg-primary-foreground/5 border border-primary-foreground/10 aspect-[4/3] flex items-center justify-center">
-                <div className="text-center text-primary-foreground/25 p-8">
-                  <Wrench className="w-16 h-16 mx-auto mb-4" aria-hidden="true" />
-                  <p className="text-sm">HANDOFF: voeg hier een portretfoto van Jerry Callé in</p>
-                </div>
-              </div>
-            </div>
+          <div className="max-w-2xl">
+            <div className="w-12 h-1.5 bg-accent rounded-full mb-6" aria-hidden="true" />
+            <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-none tracking-tight mb-6">
+              Jerry Callé.{" "}
+              <span className="text-accent">Aannemer.</span>
+            </h1>
+            <p className="text-primary-foreground/75 text-lg sm:text-xl leading-relaxed">
+              Depuis 2008 realiseer ik verbouwingen, aanbouwen en nieuwbouw in
+              de regio Antwerpen. Geen onderaannemers, geen tussenpersonen —
+              persoonlijk contact van begin tot einde.
+            </p>
           </div>
         </div>
       </section>
@@ -117,12 +100,14 @@ export default function OverOnsPage() {
                   className="absolute -bottom-3 -left-3 w-full h-full rounded-2xl border-2 border-accent/25 pointer-events-none"
                   aria-hidden="true"
                 />
-                {/* TODO: replace with workspace / project photo from /public/photos/ */}
-                <div className="relative rounded-2xl overflow-hidden bg-secondary aspect-[4/3] flex items-center justify-center border border-border">
-                  <div className="text-center text-muted-foreground/40 p-8">
-                    <MapPin className="w-12 h-12 mx-auto mb-3" aria-hidden="true" />
-                    <p className="text-sm">HANDOFF: voeg hier een werkplaats- of projectfoto in</p>
-                  </div>
+                <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                  <Image
+                    src="/photos/CompanyVan.jpg"
+                    alt="J&R Home Creation bestelwagens op locatie"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
                 </div>
               </div>
             </div>

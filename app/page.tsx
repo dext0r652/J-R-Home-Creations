@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Clock, MapPin, Wrench } from "lucide-react";
+import { ProjectSlideshow } from "@/components/project-slideshow";
 
 export const metadata: Metadata = {
   // Homepage inherits title.default — "J&R Home Creation" — no per-page title needed
@@ -103,12 +105,15 @@ export default function HomePage() {
                 className="absolute -top-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/40 pointer-events-none"
                 aria-hidden="true"
               />
-              {/* TODO: replace with real photo from /public/photos/ */}
-              <div className="relative rounded-2xl overflow-hidden bg-primary-foreground/5 border border-primary-foreground/10 aspect-[4/3] flex items-center justify-center">
-                <div className="text-center text-primary-foreground/25 p-8">
-                  <Wrench className="w-16 h-16 mx-auto mb-4" aria-hidden="true" />
-                  <p className="text-sm">HANDOFF: voeg hier een foto in van Jerry Callé of een project</p>
-                </div>
+              <div className="relative rounded-2xl bg-white p-10 sm:p-14 aspect-[4/3] flex items-center justify-center">
+                <Image
+                  src="/logo.png"
+                  alt="J&R Home Creation"
+                  width={420}
+                  height={140}
+                  className="w-full max-w-xs sm:max-w-sm object-contain"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -181,7 +186,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 4. SOCIAL PROOF — omitted: no real testimonials in CONTEXT.md §8 ── */}
+      {/* ── 4. PROJECT SLIDESHOW ────────────────────────────────────── */}
+      <section className="bg-secondary py-20 sm:py-24" aria-labelledby="projecten-heading">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <div className="w-10 h-1 bg-accent rounded-full mb-4" aria-hidden="true" />
+            <h2
+              id="projecten-heading"
+              className="font-display font-bold text-4xl sm:text-5xl"
+            >
+              Onze projecten
+            </h2>
+          </div>
+          <ProjectSlideshow />
+        </div>
+      </section>
 
       {/* ── 5. FINAL CTA ─────────────────────────────────────────────── */}
       <section

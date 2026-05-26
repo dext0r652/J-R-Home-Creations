@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Menu, X } from "lucide-react";
 
@@ -31,10 +32,17 @@ export function Navbar() {
         {/* Logo / wordmark */}
         <Link
           href="/"
-          className="font-display font-bold text-xl tracking-wide text-primary-foreground hover:text-accent transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded"
+          className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary rounded"
+          aria-label="J&R Home Creation — naar de startpagina"
         >
-          {/* HANDOFF: swap for <Image src="/logo.png"> when logo file is provided */}
-          J&amp;R Home Creation
+          <Image
+            src="/logo1.png"
+            alt="J&R Home Creation"
+            width={160}
+            height={44}
+            className="h-9 w-auto brightness-0 invert"
+            priority
+          />
         </Link>
 
         {/* Desktop nav */}
