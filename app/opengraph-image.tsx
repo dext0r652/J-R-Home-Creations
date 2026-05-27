@@ -67,7 +67,7 @@ export default async function Image() {
             fontWeight: 600,
           }}
         >
-          Regio Antwerpen · Actief depuis 2008
+          Regio Antwerpen · Actief sinds 2008
         </div>
       </div>
     ),

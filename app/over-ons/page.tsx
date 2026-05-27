@@ -6,12 +6,12 @@ import { ArrowRight, CheckCircle2, Clock, MapPin, Wrench } from "lucide-react";
 export const metadata: Metadata = {
   title: "Over ons",
   description:
-    "Ik ben Jerry Callé — eenmanszaak aannemer uit Schelle, actief in de regio Antwerpen depuis 2008. Verbouwingen, aanbouwen en nieuwbouw met oog voor kwaliteit.",
+    "Wij zijn J&R Home Creation — aannemer uit Schelle, actief in de regio Antwerpen sinds 2008. Verbouwingen, aanbouwen en nieuwbouw met oog voor kwaliteit.",
   alternates: { canonical: "https://jrhomecreation.be/over-ons" },
   openGraph: {
     title: "Over ons | J&R Home Creation",
     description:
-      "Ik ben Jerry Callé — eenmanszaak aannemer uit Schelle, actief in de regio Antwerpen depuis 2008.",
+      "Wij zijn J&R Home Creation — aannemer uit Schelle, actief in de regio Antwerpen sinds 2008.",
     url: "https://jrhomecreation.be/over-ons",
   },
 };
@@ -35,7 +35,7 @@ export default function OverOnsPage() {
               <span className="text-accent">Aannemer.</span>
             </h1>
             <p className="text-primary-foreground/75 text-lg sm:text-xl leading-relaxed">
-              Depuis 2008 realiseer ik verbouwingen, aanbouwen en nieuwbouw in
+              Sinds 2008 realiseren wij verbouwingen, aanbouwen en nieuwbouw in
               de regio Antwerpen. Geen onderaannemers, geen tussenpersonen —
               persoonlijk contact van begin tot einde.
             </p>
@@ -69,25 +69,25 @@ export default function OverOnsPage() {
                 id="verhaal-heading"
                 className="font-display font-bold text-4xl sm:text-5xl mb-8"
               >
-                Waarom ik dit doe
+                Waarom wij dit doen
               </h2>
               {/* HANDOFF: vervang onderstaande plaatshouder door het echte verhaal van Jerry Callé */}
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>
-                  Bouwen is voor mij geen job — het is een vak. Ik ben opgegroeid met de
+                  Bouwen is voor ons geen job — het is een vak. Wij zijn opgegroeid met de
                   overtuiging dat iets goed doen betekent: het juist doen. Geen snelle
                   oplossingen, geen concessies op kwaliteit, geen onduidelijkheid over
                   kosten of planning.
                 </p>
                 <p>
-                  Depuis 2008 werk ik als zelfstandig aannemer in de regio Antwerpen. Ik
-                  begeleid elk project persoonlijk — van de eerste opname tot de
-                  oplevering. Dat betekent dat je altijd met mij praat, niet met een
+                  Sinds 2008 werken wij als aannemer in de regio Antwerpen. Wij
+                  begeleiden elk project persoonlijk — van de eerste opname tot de
+                  oplevering. Dat betekent dat je altijd met ons praat, niet met een
                   projectleider die het werk heeft doorgegeven.
                 </p>
                 <p>
                   Of het nu gaat om een badkamerrenovatie, een volledige aanbouw, of een
-                  nieuwbouw van nul: ik zorg dat het klopt. Vakkundig, eerlijk, en op
+                  nieuwbouw van nul: wij zorgen dat het klopt. Vakkundig, eerlijk, en op
                   tijd.
                 </p>
               </div>
@@ -124,7 +124,7 @@ export default function OverOnsPage() {
               id="aanpak-heading"
               className="font-display font-bold text-4xl sm:text-5xl"
             >
-              Hoe ik werk
+              Hoe wij werken
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -132,12 +132,12 @@ export default function OverOnsPage() {
               {
                 step: "01",
                 title: "Opname & offerte",
-                body: "Ik kom ter plaatse, bekijk het project en bezorg je een duidelijke offerte — zonder verrassingen achteraf.",
+                body: "Wij komen ter plaatse, bekijken het project en bezorgen je een duidelijke offerte — zonder verrassingen achteraf.",
               },
               {
                 step: "02",
                 title: "Uitvoering",
-                body: "Ik voer het werk zelf uit. Je hebt één aanspreekpunt, één verantwoordelijke, en een vaste planning.",
+                body: "Wij voeren het werk zelf uit. Je hebt één aanspreekpunt, één verantwoordelijke, en een vaste planning.",
               },
               {
                 step: "03",
@@ -174,7 +174,7 @@ export default function OverOnsPage() {
             Klaar om te starten?
           </h2>
           <p className="text-primary-foreground/70 text-lg max-w-md mx-auto mb-8">
-            Vertel me over je project en ik bezorg je een eerlijke offerte —
+            Vertel ons over je project en wij bezorgen je een eerlijke offerte —
             zonder verplichtingen.
           </p>
           <Link

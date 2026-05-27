@@ -24,7 +24,7 @@ export default function DienstenPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
           <div className="w-12 h-1.5 bg-accent rounded-full mb-6" aria-hidden="true" />
           <h1 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl leading-none tracking-tight mb-4">
-            Wat ik voor je doe
+            Wat wij voor je doen
           </h1>
           <p className="text-primary-foreground/70 text-lg sm:text-xl max-w-xl">
             Drie diensten — één aanspreekpunt. Elk project van opname tot
@@ -54,12 +54,12 @@ export default function DienstenPage() {
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Van een kleine badkamerrenovatie tot een volledige herinrichting
-                van je woning — ik pak het aan zoals het hoort. Zorgvuldig,
+                van je woning — pakken wij het aan zoals het hoort. Zorgvuldig,
                 vakkundig, en met respect voor je budget en planning.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Ik werk uitsluitend met kwalitatieve materialen en lever elk
-                project af zoals ik het zelf zou willen ontvangen.
+                Wij werken uitsluitend met kwalitatieve materialen en leveren elk
+                project af zoals wij het zelf zouden willen ontvangen.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
@@ -139,12 +139,12 @@ export default function DienstenPage() {
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Je woning vergroot met een aanbouw die naadloos aansluit op de
                 bestaande constructie — architecturaal, bouwtechnisch en
-                esthetisch. Ik begeleid het volledige traject, van
+                esthetisch. Wij begeleiden het volledige traject, van
                 vergunningsaanvraag tot oplevering.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Een aanbouw vraagt om precisie en ervaring. Na 18 jaar weet ik
-                waar de valkuilen zitten — en hoe ik ze vermijd.
+                Een aanbouw vraagt om precisie en ervaring. Na 18 jaar weten wij
+                waar de valkuilen zitten — en hoe wij ze vermijden.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
@@ -193,12 +193,12 @@ export default function DienstenPage() {
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Je nieuwbouwproject van A tot Z — begeleid door een ervaren
-                aannemer die zelf de handen uit de mouwen steekt. Ik werk nauw
-                samen met architecten en studiekantoren, maar het is mij die
-                verantwoordelijk blijft.
+                aannemer die zelf de handen uit de mouwen steekt. Wij werken nauw
+                samen met architecten en studiekantoren, maar het zijn wij die
+                verantwoordelijk blijven.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Nieuwbouw is een grote investering. Ik zorg dat elke fase
+                Nieuwbouw is een grote investering. Wij zorgen dat elke fase
                 correct verloopt: ruwbouw, technieken, afwerking. Zonder
                 verrassingen, zonder compromissen.
               </p>
@@ -264,23 +264,23 @@ export default function DienstenPage() {
             {[
               {
                 q: "Werk je met onderaannemers?",
-                a: "Nee. Ik voer het werk zelf uit. Dat betekent directe controle op kwaliteit en één aanspreekpunt voor jou gedurende het hele project.",
+                a: "Nee. Wij voeren het werk zelf uit. Dat betekent directe controle op kwaliteit en één aanspreekpunt voor jou gedurende het hele project.",
               },
               {
                 q: "In welke regio ben je actief?",
-                a: "Ik werk hoofdzakelijk in de regio Antwerpen. Twijfel je of jouw gemeente in mijn werkgebied valt? Neem gerust contact op.",
+                a: "Wij werken hoofdzakelijk in de regio Antwerpen. Twijfel je of jouw gemeente in ons werkgebied valt? Neem gerust contact op.",
               },
               {
                 q: "Hoe vraag ik een offerte aan?",
-                a: "Vul het contactformulier in of bel me rechtstreeks. Ik kom ter plaatse voor een opname en bezorg je daarna een gedetailleerde, vrijblijvende offerte.",
+                a: "Vul het contactformulier in of bel ons rechtstreeks. Wij komen ter plaatse voor een opname en bezorgen je daarna een gedetailleerde, vrijblijvende offerte.",
               },
               {
                 q: "Hoe lang duurt een gemiddeld project?",
-                a: "Dat hangt sterk af van de omvang. Een badkamerrenovatie duurt doorgaans 1–2 weken; een volledige verbouwing of aanbouw kan meerdere maanden in beslag nemen. Ik geef je altijd een realistische planning voor de start.",
+                a: "Dat hangt sterk af van de omvang. Een badkamerrenovatie duurt doorgaans 1–2 weken; een volledige verbouwing of aanbouw kan meerdere maanden in beslag nemen. Wij geven je altijd een realistische planning voor de start.",
               },
               {
                 q: "Begeleid je ook de vergunningsaanvraag?",
-                a: "Ik werk nauw samen met erkende architecten die de vergunningsprocedure begeleiden. Voor projecten waarbij een vergunning verplicht is, verwijs ik je door naar de juiste partner.",
+                a: "Wij werken nauw samen met erkende architecten die de vergunningsprocedure begeleiden. Voor projecten waarbij een vergunning verplicht is, verwijzen wij je door naar de juiste partner.",
               },
             ].map(({ q, a }) => (
               <div
@@ -309,7 +309,7 @@ export default function DienstenPage() {
             Klaar om te starten?
           </h2>
           <p className="text-primary-foreground/70 text-lg max-w-md mx-auto mb-8">
-            Vertel me over je project en ik bezorg je een eerlijke offerte —
+            Vertel ons over je project en wij bezorgen je een eerlijke offerte —
             zonder verplichtingen.
           </p>
           <Link

@@ -7,7 +7,7 @@ import { ProjectSlideshow } from "@/components/project-slideshow";
 export const metadata: Metadata = {
   // Homepage inherits title.default — "J&R Home Creation" — no per-page title needed
   description:
-    "Verbouwingen, aanbouwen en nieuwbouw in de regio Antwerpen. Ik ben Jerry Callé, eenmanszaak aannemer actief depuis 2008. Vakkundig en zonder compromis.",
+    "Verbouwingen, aanbouwen en nieuwbouw in de regio Antwerpen. Wij zijn J&R Home Creation, aannemer actief sinds 2008. Vakkundig en zonder compromis.",
   alternates: { canonical: "https://jrhomecreation.be/" },
   openGraph: {
     title: "J&R Home Creation",
@@ -156,7 +156,7 @@ export default function HomePage() {
               id="diensten-heading"
               className="font-display font-bold text-4xl sm:text-5xl"
             >
-              Wat ik voor je doe
+              Wat wij voor je doen
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -216,7 +216,7 @@ export default function HomePage() {
             Klaar om te starten?
           </h2>
           <p className="text-primary-foreground/70 text-lg max-w-md mx-auto mb-8">
-            Vertel me over je project en ik bezorg je een eerlijke offerte —
+            Vertel ons over je project en wij bezorgen je een eerlijke offerte —
             zonder verplichtingen.
           </p>
           <Link

@@ -5,7 +5,7 @@ import { ContactForm } from "@/components/contact-form";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Neem contact op met Jerry Callé van J&R Home Creation. Bel, mail, of stuur een WhatsApp — ik bezorg je een vrijblijvende offerte.",
+    "Neem contact op met J&R Home Creation. Bel, mail, of stuur een WhatsApp — wij bezorgen je een vrijblijvende offerte.",
   alternates: { canonical: "https://jrhomecreation.be/contact" },
   openGraph: {
     title: "Contact | J&R Home Creation",
@@ -63,7 +63,7 @@ export default function ContactPage() {
             Neem contact op
           </h1>
           <p className="text-primary-foreground/70 text-lg sm:text-xl max-w-lg">
-            Kies de manier die het best bij jou past — ik reageer zo snel
+            Kies de manier die het best bij jou past — wij reageren zo snel
             mogelijk.
           </p>
         </div>
