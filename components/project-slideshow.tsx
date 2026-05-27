@@ -5,11 +5,15 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
-  { src: "/photos/driveway.jpg", alt: "Afgewerkte oprit en gevel — renovatieproject" },
-  { src: "/photos/renovation.jpg", alt: "Aanbouw in uitvoering — staalstructuur en terras" },
-  { src: "/photos/Bathroom.jpg", alt: "Badkamerrenovatie met microcement wanden" },
-  { src: "/photos/garage.jpg", alt: "Metselwerk en ruwbouw in uitvoering" },
-  { src: "/photos/demolition.jpg", alt: "Sloopwerk als onderdeel van een totaalverbouwing" },
+  { src: "/Projects/driveway.jpg", alt: "Afgewerkte oprit en gevel" },
+  { src: "/Projects/Bathroom.jpg", alt: "Badkamerrenovatie met microcement wanden" },
+  { src: "/Projects/demolition.jpg", alt: "Sloopwerk als onderdeel van een totaalverbouwing" },
+  { src: "/Projects/cementing.jpg", alt: "Fundering en betonwerken" },
+  { src: "/Projects/Woodenwall1.0.jpg", alt: "Houten gevelbekleding — afgewerkt project" },
+  { src: "/Projects/Woodenwall1.1.jpg", alt: "Houten gevelbekleding — detail" },
+  { src: "/Projects/Plumbing1.1.jpg", alt: "Leidingwerken op locatie" },
+  { src: "/Projects/Plumbing1.2.jpg", alt: "Riolering en technieken" },
+  { src: "/Projects/Floormesh.jpg", alt: "Vloerwapening voor betonvloer" },
 ];
 
 export function ProjectSlideshow() {

@@ -90,8 +90,8 @@ export default function DienstenPage() {
               />
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="/photos/Bathroom.jpg"
-                  alt="Badkamerrenovatie met microcement wanden en grote vloertegels"
+                  src="/photos/Verbouwing.jpg"
+                  alt="Keukenrenovatie met kookeiland en tuinzicht — afgewerkt project"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -117,8 +117,8 @@ export default function DienstenPage() {
               />
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <Image
-                  src="/photos/renovation.jpg"
-                  alt="Aanbouw in uitvoering — staalstructuur en terrasaanleg"
+                  src="/photos/Aanbouw.jpg"
+                  alt="Aanbouw in uitvoering — staalstructuur en terras"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -224,18 +224,23 @@ export default function DienstenPage() {
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
-            <div className="relative">
-              <div
-                className="absolute -top-3 -right-3 w-full h-full rounded-2xl border-2 border-accent/20 pointer-events-none"
-                aria-hidden="true"
-              />
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+            <div className="grid grid-cols-2 gap-3">
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
                 <Image
-                  src="/photos/cementing1.2.jpg"
-                  alt="Nieuwbouw in uitvoering — fundering en ruwbouw"
+                  src="/photos/Nieuwbouw1.jpg"
+                  alt="Nieuwbouw in uitvoering — ruwbouw fase"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
+                <Image
+                  src="/photos/Nieuwbouw2.jpg"
+                  alt="Nieuwbouw afgewerkt — moderne gevel"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
                 />
               </div>
             </div>
